@@ -1,10 +1,19 @@
+const plays = ["rock", "paper", "scissors"];
+
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    let result = "";
+    let result = ""
+    let playerSelection = "";
 
     for (let i = 0; i < 5; i++) {
-        result = playRound(prompt("Choose (rock), (paper), (scissors):"), computerPlay())
+        while (true) {
+            playerSelection = prompt("Choose (rock), (paper), (scissors):")
+            if (plays.includes(playerSelection.toLowerCase())) {
+                break
+            }
+        }
+        result = playRound(playerSelection, computerPlay())
         console.log(result)
         if (result.startsWith("You Win")) {
             playerScore++
@@ -23,7 +32,6 @@ function game() {
 
 
 function computerPlay() {
-    const plays = ["rock", "paper", "scissors"];
     return plays[Math.floor(Math.random() * 3)]
 }
 
