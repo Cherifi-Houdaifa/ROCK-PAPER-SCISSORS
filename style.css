@@ -47,3 +47,28 @@ html, body {
 .main input:active {
     background-color: rgb(219, 214, 214);
 }
+
+.round-status {
+    margin-top: 20px;
+}
+.round-status p {
+    font-size: 2rem;
+    text-align: center;
+}
+.winner {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.winner p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.winner input {
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin: auto;
+}
