@@ -27,7 +27,7 @@ btns.forEach((btn) => {
             winner.textContent = "You win";
             refresh.removeAttribute("hidden");
         }
-        else if (Number(computerScore.textContent === 5)) {
+        else if (Number(computerScore.textContent) === 5) {
             winner.textContent = "You lose";
             refresh.removeAttribute("hidden");
         }
